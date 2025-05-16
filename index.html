@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Painel de Estudos</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app-container">
-        <header class="app-header">
-            <div class="header-container">
-                <h1>Meu Painel de Estudos</h1>
+      <header class="app-header">
+        <div class="header-container">
+          <h1>Meu Painel de Estudos</h1>
 
-            </div>
-        </header>
+          <button class="add-task-btn" onclick="">
+            <span>Nova Tarefa</span>
+          </button>
+        </div>
+      </header>
     </div>
-</body>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Adicionar Tarefa</h3>
+          <button class="close-btn">X</button>
+        </div>
+
+        <form id="study-form" class="study-form">
+          <div class="form-group">
+            <label>Matéria</label>
+            <input type="text" placeholder="Nome da matéria" />
+          </div>
+
+          <div class="form-group">
+            <label>Data</label>
+            <input type="date" id="date" />
+          </div>
+
+          <div class="form-group">
+            <label>Cor</label>
+            <input type="color" id="color" value="#6366f1" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
