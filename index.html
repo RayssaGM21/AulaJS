@@ -12,7 +12,7 @@
         <div class="header-container">
           <h1>Meu Painel de Estudos</h1>
 
-          <button class="add-task-btn" onclick="">
+          <button class="add-task-btn" onclick="abrirModal()">
             <span>Nova Tarefa</span>
           </button>
         </div>
@@ -23,24 +23,25 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3>Adicionar Tarefa</h3>
-          <button class="close-btn">X</button>
+          <button class="close-btn" onclick="fecharModal()">X</button>
         </div>
 
         <form id="study-form" class="study-form">
           <div class="form-group">
             <label>Matéria</label>
-            <input type="text" placeholder="Nome da matéria" />
+            <input id="materia" type="text" placeholder="Nome da matéria" />
           </div>
 
           <div class="form-group">
             <label>Data</label>
-            <input type="date" id="date" />
+            <input id="data" type="date" />
           </div>
 
           <div class="form-group">
             <label>Cor</label>
-            <input type="color" id="color" value="#6366f1" />
+            <input id="cor" type="color" value="#6366f1" />
           </div>
+          <button type="submit">Salvar</button>
         </form>
       </div>
     </div>

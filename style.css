@@ -109,3 +109,8 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+.modal.open{
+    opacity: 1;
+    visibility: visible;
+}
