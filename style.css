@@ -8,6 +8,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fbfbfb;
     color: #1e293b;
+    padding-left: 16px;
+    padding-right: 16px;
     transition: background-color 0.2s, color 0.2s;
     line-height: 1.5;
 }
@@ -17,7 +19,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +37,7 @@ body {
 
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -113,4 +115,51 @@ body {
 .modal.open{
     opacity: 1;
     visibility: visible;
+}
+
+.task-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+}
+
+.task-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+.task-color-indicator{
+    height: 8px;
+    width: 100%;
+}
+
+.task-materia{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.task-info{
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.task-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tasks-section h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
 }

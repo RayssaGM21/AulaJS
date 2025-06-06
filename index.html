@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Painel de Estudos</title>
-  </head>
-  <body>
-    <div class="app-container">
-      <header class="app-header">
-        <div class="header-container">
-          <h1>Meu Painel de Estudos</h1>
 
-          <button class="add-task-btn" onclick="abrirModal()">
-            <span>Nova Tarefa</span>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Painel de Estudos</title>
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-container">
+        <h1>Meu Painel de Estudos</h1>
+
+        <button class="add-task-btn" onclick="abrirModal()">
+          <span>Nova Tarefa</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <section id="tasks-section" class="tasks-section">
+    <h2>Atividades</h2>
+    <div id="task-container" class="task-container"></div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Adicionar Tarefa</h3>
+        <button class="close-btn" onclick="fecharModal()">X</button>
+      </div>
+
+      <form id="study-form" class="study-form">
+        <div class="form-group">
+          <label>Matéria</label>
+          <input id="materia" type="text" placeholder="Nome da matéria" />
         </div>
-      </header>
+
+        <div class="form-group">
+          <label>Data</label>
+          <input id="data" type="date" />
+        </div>
+
+        <div class="form-group">
+          <label>Cor</label>
+          <input id="cor" type="color" value="#6366f1" />
+        </div>
+        <button type="submit">Salvar</button>
+      </form>
     </div>
+  </div>
 
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Adicionar Tarefa</h3>
-          <button class="close-btn" onclick="fecharModal()">X</button>
-        </div>
-
-        <form id="study-form" class="study-form">
-          <div class="form-group">
-            <label>Matéria</label>
-            <input id="materia" type="text" placeholder="Nome da matéria" />
-          </div>
-
-          <div class="form-group">
-            <label>Data</label>
-            <input id="data" type="date" />
-          </div>
-
-          <div class="form-group">
-            <label>Cor</label>
-            <input id="cor" type="color" value="#6366f1" />
-          </div>
-          <button type="submit">Salvar</button>
-        </form>
+  <template id="task-template">
+    <div class="task-card">
+      <div class="task-color-indicator"></div>
+      <div class="task-info">
+        <div class="task-materia"></div>
+        <div class="task-data"></div>
       </div>
     </div>
+  </template>
 
-    <script src="./script.js"></script>
-  </body>
+  <script src="./script.js"></script>
+</body>
+
 </html>
